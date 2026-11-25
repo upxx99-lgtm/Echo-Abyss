@@ -1,0 +1,27 @@
+{
+	"type": "minecraft:ore",
+	"config": {
+		"discard_chance_on_air_exposure": 0.0,
+		"size": 9,
+		"targets": [
+			{
+				"state": {
+					"Name": "echo_abyss:echo_ore"
+				},
+				"target": {
+					"predicate_type": "minecraft:block_match",
+					"block": "echo_abyss:echo_stone"
+				}
+			},
+			{
+				"state": {
+					"Name": "echo_abyss:echo_ore"
+				},
+				"target": {
+					"predicate_type": "minecraft:block_match",
+					"block": "echo_abyss:deep_echo_stone"
+				}
+			}
+		]
+	}
+}

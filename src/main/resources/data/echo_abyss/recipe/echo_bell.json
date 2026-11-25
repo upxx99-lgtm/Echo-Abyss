@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		"minecraft:bell",
+		"echo_abyss:bell_crystal",
+		"echo_abyss:bell_crystal"
+	],
+	"result": {
+		"id": "echo_abyss:echo_bell"
+	}
+}

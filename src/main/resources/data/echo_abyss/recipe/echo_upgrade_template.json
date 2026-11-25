@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"D": "minecraft:diamond",
+		"C": "echo_abyss:bell_crystal"
+	},
+	"pattern": [
+		"DDD",
+		"DCD",
+		"DDD"
+	],
+	"result": {
+		"id": "echo_abyss:echo_upgrade_template"
+	}
+}

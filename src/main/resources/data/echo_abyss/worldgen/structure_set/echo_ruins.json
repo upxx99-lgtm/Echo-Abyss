@@ -1,0 +1,14 @@
+{
+	"placement": {
+		"type": "minecraft:random_spread",
+		"salt": 1472951,
+		"separation": 3,
+		"spacing": 9
+	},
+	"structures": [
+		{
+			"structure": "echo_abyss:echo_ruin",
+			"weight": 1
+		}
+	]
+}
