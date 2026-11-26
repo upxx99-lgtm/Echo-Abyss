@@ -13,6 +13,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -75,8 +76,27 @@ public class AbyssKeyItem extends Item {
 		ItemStack stack = player.getItemInHand(hand);
 		stack.hurtAndBreak(1, player, hand);
 		ORIGINS.put(player.getUUID(), new Origin(from.dimension(), player.position()));
-		go(player, abyss, findSpot(abyss));
+		Vec3 spot = findSpot(abyss);
+		ensureGround(abyss, spot);
+		go(player, abyss, spot);
 		return InteractionResult.SUCCESS;
+	}
+
+	/** Makes sure there is a floor under the arrival point and room to stand. */
+	private static void ensureGround(ServerLevel level, Vec3 spot) {
+		int bx = Mth.floor(spot.x);
+		int by = Mth.floor(spot.y);
+		int bz = Mth.floor(spot.z);
+		for (int dx = -3; dx <= 3; dx++) {
+			for (int dz = -3; dz <= 3; dz++) {
+				BlockPos floor = new BlockPos(bx + dx, by - 1, bz + dz);
+				if (level.getBlockState(floor).isAir()) {
+					level.setBlockAndUpdate(floor, ModItems.ECHO_STONE.defaultBlockState());
+				}
+			}
+		}
+		level.setBlockAndUpdate(new BlockPos(bx, by, bz), Blocks.AIR.defaultBlockState());
+		level.setBlockAndUpdate(new BlockPos(bx, by + 1, bz), Blocks.AIR.defaultBlockState());
 	}
 
 	private static void go(ServerPlayer player, ServerLevel target, Vec3 pos) {
