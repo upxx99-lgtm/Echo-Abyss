@@ -8,7 +8,7 @@
 	"block.echo_abyss.echo_ore": "Echo Ore",
 	"item.echo_abyss.echo_shard": "Echo Scrap",
 	"item.echo_abyss.echo_ingot": "Echo Ingot",
-	"item.echo_abyss.echo_upgrade_template": "Echo Upgrade Template",
+	"item.echo_abyss.echo_upgrade_template": "Smithing Template",
 	"item.echo_abyss.echo_sword": "Echo Sword",
 	"item.echo_abyss.echo_pickaxe": "Echo Pickaxe",
 	"item.echo_abyss.echo_axe": "Echo Axe",
@@ -28,5 +28,10 @@
 	"entity.echo_abyss.echo_warden": "Echo Warden",
 	"entity.echo_abyss.bell_warden": "Bell Warden",
 	"item.echo_abyss.echo_warden_spawn_egg": "Echo Warden Spawn Egg",
-	"item.echo_abyss.bell_warden_spawn_egg": "Bell Warden Spawn Egg"
+	"item.echo_abyss.bell_warden_spawn_egg": "Bell Warden Spawn Egg",
+	"tooltip.echo_abyss.template.upgrade": "Echo Upgrade",
+	"tooltip.echo_abyss.template.applies_to": "Applies to:",
+	"tooltip.echo_abyss.template.applies_to_value": "Netherite Equipment",
+	"tooltip.echo_abyss.template.ingredients": "Ingredients:",
+	"tooltip.echo_abyss.template.ingredients_value": "Echo Ingot"
 }

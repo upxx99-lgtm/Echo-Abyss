@@ -8,7 +8,7 @@
 	"block.echo_abyss.echo_ore": "Звонкая руда",
 	"item.echo_abyss.echo_shard": "Звонкий лом",
 	"item.echo_abyss.echo_ingot": "Звонкий слиток",
-	"item.echo_abyss.echo_upgrade_template": "Шаблон улучшения: Эхо",
+	"item.echo_abyss.echo_upgrade_template": "Шаблон кузнечного дела",
 	"item.echo_abyss.echo_sword": "Звонкий меч",
 	"item.echo_abyss.echo_pickaxe": "Звонкая кирка",
 	"item.echo_abyss.echo_axe": "Звонкий топор",
@@ -28,5 +28,10 @@
 	"entity.echo_abyss.echo_warden": "Эхо-страж",
 	"entity.echo_abyss.bell_warden": "Колокольный страж",
 	"item.echo_abyss.echo_warden_spawn_egg": "Яйцо призыва: Эхо-страж",
-	"item.echo_abyss.bell_warden_spawn_egg": "Яйцо призыва: Колокольный страж"
+	"item.echo_abyss.bell_warden_spawn_egg": "Яйцо призыва: Колокольный страж",
+	"tooltip.echo_abyss.template.upgrade": "Звонкое улучшение",
+	"tooltip.echo_abyss.template.applies_to": "Применяется к:",
+	"tooltip.echo_abyss.template.applies_to_value": "Незеритовое снаряжение",
+	"tooltip.echo_abyss.template.ingredients": "Ингредиенты:",
+	"tooltip.echo_abyss.template.ingredients_value": "Звонкий слиток"
 }

@@ -108,6 +108,7 @@ public class AbyssKeyItem extends Item {
 
 	private static void burst(ServerLevel level, Vec3 pos) {
 		level.sendParticles(ModParticles.ECHO_WISP, pos.x, pos.y + 1.0, pos.z, 90, 0.5, 1.0, 0.5, 0.6);
+		level.sendParticles(ParticleTypes.PORTAL, pos.x, pos.y + 1.0, pos.z, 90, 0.5, 1.0, 0.5, 0.6);
 		level.sendParticles(ModParticles.ECHO_SPARK, pos.x, pos.y + 1.0, pos.z, 40, 0.3, 0.8, 0.3, 0.1);
 		level.playSound((Player) null, pos.x, pos.y, pos.z, ModSounds.ECHO_PORTAL, SoundSource.PLAYERS, 1.0F, 1.0F);
 	}

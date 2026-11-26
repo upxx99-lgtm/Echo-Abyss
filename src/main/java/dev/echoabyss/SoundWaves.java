@@ -95,6 +95,7 @@ public final class SoundWaves {
 		if (maxRadius >= 10.0) {
 			// big noise: flash at the source
 			level.sendParticles(ModParticles.ECHO_RING, origin.x, origin.y + 1.0, origin.z, 12, 0.6, 0.4, 0.6, 0.02);
+			level.sendParticles(ParticleTypes.SONIC_BOOM, origin.x, origin.y + 1.0, origin.z, 1, 0.0, 0.0, 0.0, 0.0);
 			level.sendParticles(ModParticles.ECHO_SPARK, origin.x, origin.y + 0.3, origin.z, 24, 0.4, 0.1, 0.4, 0.12);
 		}
 	}
@@ -196,6 +197,7 @@ public final class SoundWaves {
 			double x = wave.origin.x + Math.cos(angle) * r;
 			double z = wave.origin.z + Math.sin(angle) * r;
 			wave.level.sendParticles(ModParticles.ECHO_SPARK, x, wave.origin.y + 0.2, z, 1, 0.0, 0.15, 0.0, 0.02);
+			wave.level.sendParticles(ParticleTypes.GLOW, x, wave.origin.y + 0.4, z, 1, 0.05, 0.2, 0.05, 0.0);
 			if (i % 3 == 0) {
 				wave.level.sendParticles(ModParticles.ECHO_WISP, x, wave.origin.y + 0.6, z, 1, 0.1, 0.3, 0.1, 0.0);
 			}
