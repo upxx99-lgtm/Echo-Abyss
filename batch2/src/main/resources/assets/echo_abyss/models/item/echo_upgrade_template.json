@@ -1,6 +1,0 @@
-{
-	"parent": "minecraft:item/generated",
-	"textures": {
-		"layer0": "echo_abyss:item/echo_upgrade_template"
-	}
-}
