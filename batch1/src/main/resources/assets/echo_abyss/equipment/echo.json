@@ -1,0 +1,14 @@
+{
+	"layers": {
+		"humanoid": [
+			{
+				"texture": "echo_abyss:echo"
+			}
+		],
+		"humanoid_leggings": [
+			{
+				"texture": "echo_abyss:echo"
+			}
+		]
+	}
+}

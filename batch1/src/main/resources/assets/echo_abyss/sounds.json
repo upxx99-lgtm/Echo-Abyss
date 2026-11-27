@@ -1,0 +1,98 @@
+{
+	"echo_fork": {
+		"sounds": [
+			{
+				"name": "echo_abyss:echo_fork",
+				"volume": 1.0
+			}
+		]
+	},
+	"echo_bell": {
+		"sounds": [
+			{
+				"name": "echo_abyss:echo_bell",
+				"volume": 1.0
+			}
+		]
+	},
+	"echo_wave": {
+		"sounds": [
+			{
+				"name": "echo_abyss:echo_wave",
+				"volume": 1.0
+			}
+		]
+	},
+	"echo_portal": {
+		"sounds": [
+			{
+				"name": "echo_abyss:echo_portal",
+				"volume": 1.0
+			}
+		]
+	},
+	"echo_warden_ambient": {
+		"sounds": [
+			{
+				"name": "echo_abyss:echo_warden_ambient",
+				"volume": 1.0
+			}
+		]
+	},
+	"echo_warden_hurt": {
+		"sounds": [
+			{
+				"name": "echo_abyss:echo_warden_hurt",
+				"volume": 1.0
+			}
+		]
+	},
+	"echo_warden_roar": {
+		"sounds": [
+			{
+				"name": "echo_abyss:echo_warden_roar",
+				"volume": 1.0
+			}
+		]
+	},
+	"echo_warden_death": {
+		"sounds": [
+			{
+				"name": "echo_abyss:echo_warden_death",
+				"volume": 1.0
+			}
+		]
+	},
+	"bell_warden_ambient": {
+		"sounds": [
+			{
+				"name": "echo_abyss:bell_warden_ambient",
+				"volume": 1.0
+			}
+		]
+	},
+	"bell_warden_hurt": {
+		"sounds": [
+			{
+				"name": "echo_abyss:bell_warden_hurt",
+				"volume": 1.0
+			}
+		]
+	},
+	"bell_warden_roar": {
+		"sounds": [
+			{
+				"name": "echo_abyss:bell_warden_roar",
+				"volume": 1.0
+			}
+		]
+	},
+	"bell_warden_death": {
+		"sounds": [
+			{
+				"name": "echo_abyss:bell_warden_death",
+				"volume": 1.0
+			}
+		]
+	}
+}
