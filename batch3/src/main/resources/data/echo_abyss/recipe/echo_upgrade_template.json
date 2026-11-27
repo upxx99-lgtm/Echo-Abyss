@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"N": "minecraft:netherite_ingot",
+		"T": "echo_abyss:echo_upgrade_template",
+		"B": "echo_abyss:echo_stone"
+	},
+	"pattern": [
+		"NTN",
+		"NBN",
+		"NNN"
+	],
+	"result": {
+		"id": "echo_abyss:echo_upgrade_template",
+		"count": 2
+	}
+}

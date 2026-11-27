@@ -1,0 +1,79 @@
+{
+	"carvers": [],
+	"downfall": 0.5,
+	"effects": {
+		"water_color": "#3f76e4"
+	},
+	"features": [
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[
+			"echo_abyss:echo_ore"
+		],
+		[],
+		[],
+		[],
+		[]
+	],
+	"has_precipitation": false,
+	"spawn_costs": {},
+	"spawners": {
+		"ambient": [],
+		"axolotls": [],
+		"creature": [
+			{
+				"type": "echo_abyss:echo_golem",
+				"maxCount": 2,
+				"minCount": 1,
+				"weight": 8
+			}
+		],
+		"misc": [],
+		"monster": [
+			{
+				"type": "minecraft:enderman",
+				"maxCount": 3,
+				"minCount": 1,
+				"weight": 60
+			},
+			{
+				"type": "minecraft:skeleton",
+				"maxCount": 3,
+				"minCount": 2,
+				"weight": 20
+			},
+			{
+				"type": "minecraft:zombie",
+				"maxCount": 3,
+				"minCount": 2,
+				"weight": 20
+			},
+			{
+				"type": "echo_abyss:echo_blaze",
+				"maxCount": 2,
+				"minCount": 1,
+				"weight": 10
+			},
+			{
+				"type": "echo_abyss:echo_warden",
+				"maxCount": 1,
+				"minCount": 1,
+				"weight": 1
+			},
+			{
+				"type": "echo_abyss:bell_warden",
+				"maxCount": 1,
+				"minCount": 1,
+				"weight": 1
+			}
+		],
+		"underground_water_creature": [],
+		"water_ambient": [],
+		"water_creature": []
+	},
+	"temperature": 0.5
+}

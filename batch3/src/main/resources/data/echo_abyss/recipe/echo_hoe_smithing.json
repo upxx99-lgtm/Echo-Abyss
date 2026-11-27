@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smithing_transform",
+	"template": "echo_abyss:echo_upgrade_template",
+	"base": "minecraft:netherite_hoe",
+	"addition": "echo_abyss:echo_ingot",
+	"result": {
+		"id": "echo_abyss:echo_hoe"
+	}
+}

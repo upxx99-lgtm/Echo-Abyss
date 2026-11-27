@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"A": "minecraft:amethyst_shard",
+		"I": "minecraft:iron_ingot"
+	},
+	"pattern": [
+		"A A",
+		"AIA",
+		" I "
+	],
+	"result": {
+		"id": "echo_abyss:tuning_fork"
+	}
+}

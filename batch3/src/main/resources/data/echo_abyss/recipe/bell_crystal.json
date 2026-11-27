@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		"minecraft:amethyst_shard",
+		"minecraft:amethyst_shard",
+		"minecraft:glowstone_dust",
+		"minecraft:lapis_lazuli"
+	],
+	"result": {
+		"id": "echo_abyss:bell_crystal"
+	}
+}
