@@ -65,6 +65,22 @@ public class MiniWardenModel extends EntityModel<MiniWardenRenderState> {
         return LayerDefinition.create(mesh, 128, 128);
     }
 
+    public static LayerDefinition createGolemLayer() {
+        MeshDefinition mesh = new MeshDefinition();
+        PartDefinition root = mesh.getRoot();
+        PartDefinition p_head = root.addOrReplaceChild("head", CubeListBuilder.create().texOffs(24, 28).addBox(-4F, -9F, -4F, 8F, 9F, 8F), PartPose.offsetAndRotation(0F, -4F, 0F, 0F, 0F, 0F));
+        PartDefinition p_body = root.addOrReplaceChild("body", CubeListBuilder.create().texOffs(44, 0).addBox(-8F, 0F, -5F, 16F, 14F, 10F), PartPose.offsetAndRotation(0F, -4F, 0F, 0F, 0F, 0F));
+        PartDefinition p_left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create().texOffs(0, 0).addBox(-3F, -1F, -3F, 5F, 22F, 6F), PartPose.offsetAndRotation(11F, -3F, 0F, 0F, 0F, 0F));
+        PartDefinition p_right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create().texOffs(22, 0).addBox(-2F, -1F, -3F, 5F, 22F, 6F), PartPose.offsetAndRotation(-11F, -3F, 0F, 0F, 0F, 0F));
+        PartDefinition p_left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create().texOffs(96, 0).addBox(-3F, 0F, -3F, 6F, 14F, 6F), PartPose.offsetAndRotation(4F, 10F, 0F, 0F, 0F, 0F));
+        PartDefinition p_right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create().texOffs(0, 28).addBox(-3F, 0F, -3F, 6F, 14F, 6F), PartPose.offsetAndRotation(-4F, 10F, 0F, 0F, 0F, 0F));
+        PartDefinition p_nose = p_head.addOrReplaceChild("nose", CubeListBuilder.create().texOffs(98, 28).addBox(-1F, -3F, -6F, 2F, 4F, 2F), PartPose.offsetAndRotation(0F, 0F, 0F, 0F, 0F, 0F));
+        PartDefinition p_back_crystal = p_body.addOrReplaceChild("back_crystal", CubeListBuilder.create().texOffs(56, 28).addBox(-3F, 1F, 5F, 6F, 10F, 3F), PartPose.offsetAndRotation(0F, 0F, 0F, 0F, 0F, 0F));
+        PartDefinition p_shoulder_crystal_l = p_left_arm.addOrReplaceChild("shoulder_crystal_l", CubeListBuilder.create().texOffs(74, 28).addBox(-1F, -5F, -1F, 3F, 5F, 3F), PartPose.offsetAndRotation(0F, 0F, 0F, 0F, 0F, 0F));
+        PartDefinition p_shoulder_crystal_r = p_right_arm.addOrReplaceChild("shoulder_crystal_r", CubeListBuilder.create().texOffs(86, 28).addBox(-1F, -5F, -1F, 3F, 5F, 3F), PartPose.offsetAndRotation(0F, 0F, 0F, 0F, 0F, 0F));
+        return LayerDefinition.create(mesh, 128, 128);
+    }
+
     @Override
     public void setupAnim(MiniWardenRenderState state) {
         super.setupAnim(state);

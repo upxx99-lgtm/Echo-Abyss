@@ -15,9 +15,11 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
@@ -58,15 +60,25 @@ public final class ModItems {
 
 	// ---- ore block ----
 	public static final Block ECHO_ORE = registerBlock("echo_ore", Block::new,
-		BlockBehaviour.Properties.of().strength(4.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.AMETHYST));
+		BlockBehaviour.Properties.of().strength(4.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS));
 
 	public static final Block ECHO_BLOCK = registerBlock("echo_block", Block::new,
-		BlockBehaviour.Properties.of().strength(50.0F, 1200.0F).requiresCorrectToolForDrops().sound(SoundType.AMETHYST));
+		BlockBehaviour.Properties.of().strength(50.0F, 1200.0F).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK));
 
 	public static final Block ECHO_STONE = registerBlock("echo_stone", Block::new,
 		BlockBehaviour.Properties.of().strength(3.0F, 9.0F).requiresCorrectToolForDrops().sound(SoundType.STONE));
 	public static final Block DEEP_ECHO_STONE = registerBlock("deep_echo_stone", Block::new,
-		BlockBehaviour.Properties.of().strength(4.0F, 12.0F).requiresCorrectToolForDrops().sound(SoundType.STONE));
+		BlockBehaviour.Properties.of().strength(4.0F, 12.0F).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE));
+
+	// building blocks for the dungeons (like purpur and end stone bricks in End cities)
+	public static final Block ECHO_PURPUR = registerBlock("echo_purpur", Block::new,
+		BlockBehaviour.Properties.of().strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE));
+	public static final Block ECHO_BRICKS = registerBlock("echo_bricks", Block::new,
+		BlockBehaviour.Properties.of().strength(3.0F, 9.0F).requiresCorrectToolForDrops().sound(SoundType.STONE));
+	public static final Block ECHO_PILLAR = registerBlock("echo_pillar", RotatedPillarBlock::new,
+		BlockBehaviour.Properties.of().strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE));
+	public static final Block ECHO_GLOW = registerBlock("echo_glow", Block::new,
+		BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.GLASS).lightLevel(state -> 14));
 
 	// ---- tools ----
 	public static final Item ECHO_SWORD = register("echo_sword", Item::new, new Item.Properties().sword(ECHO_MATERIAL, 3.0F, -2.4F));
@@ -78,8 +90,15 @@ public final class ModItems {
 		new Item.Properties().spear(ECHO_MATERIAL, 2.8F, 0.3F, 1.4F, 1.1F, 2.0F, 1.1F, 0.15F, 0.25F, 0.45F));
 
 	// ---- spawn eggs for the mini-bosses ----
-	public static final Item ECHO_WARDEN_SPAWN_EGG = register("echo_warden_spawn_egg", Item::new, new Item.Properties().spawnEgg(ModEntities.ECHO_WARDEN));
-	public static final Item BELL_WARDEN_SPAWN_EGG = register("bell_warden_spawn_egg", Item::new, new Item.Properties().spawnEgg(ModEntities.BELL_WARDEN));
+	public static final Item ECHO_WARDEN_SPAWN_EGG = register("echo_warden_spawn_egg", SpawnEggItem::new, new Item.Properties().spawnEgg(ModEntities.ECHO_WARDEN));
+	public static final Item BELL_WARDEN_SPAWN_EGG = register("bell_warden_spawn_egg", SpawnEggItem::new, new Item.Properties().spawnEgg(ModEntities.BELL_WARDEN));
+
+	public static final Item ECHO_BLAZE_SPAWN_EGG = register("echo_blaze_spawn_egg", SpawnEggItem::new, new Item.Properties().spawnEgg(ModEntities.ECHO_BLAZE));
+	public static final Item ECHO_GOLEM_SPAWN_EGG = register("echo_golem_spawn_egg", SpawnEggItem::new, new Item.Properties().spawnEgg(ModEntities.ECHO_GOLEM));
+
+	// dropped by the Echo Blaze; used to craft the dungeon compass
+	public static final Item ECHO_FRAGMENT = register("echo_fragment", Item::new, new Item.Properties());
+	public static final Item ECHO_COMPASS = register("echo_compass", DungeonCompassItem::new, new Item.Properties().stacksTo(1));
 
 	// ---- armor ----
 	public static final Item ECHO_HELMET = register("echo_helmet", Item::new,
@@ -112,6 +131,10 @@ public final class ModItems {
 			output.accept(ECHO_BLOCK);
 			output.accept(ECHO_STONE);
 			output.accept(DEEP_ECHO_STONE);
+			output.accept(ECHO_PURPUR);
+			output.accept(ECHO_BRICKS);
+			output.accept(ECHO_PILLAR);
+			output.accept(ECHO_GLOW);
 			output.accept(ECHO_UPGRADE_TEMPLATE);
 			output.accept(ECHO_SWORD);
 			output.accept(ECHO_PICKAXE);
@@ -125,6 +148,10 @@ public final class ModItems {
 			output.accept(ECHO_BOOTS);
 			output.accept(ECHO_WARDEN_SPAWN_EGG);
 			output.accept(BELL_WARDEN_SPAWN_EGG);
+			output.accept(ECHO_BLAZE_SPAWN_EGG);
+			output.accept(ECHO_GOLEM_SPAWN_EGG);
+			output.accept(ECHO_FRAGMENT);
+			output.accept(ECHO_COMPASS);
 		})
 		.build();
 

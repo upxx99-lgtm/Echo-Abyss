@@ -29,6 +29,8 @@ public class EchoAbyssClient implements ClientModInitializer {
         EntityRendererProvider<MiniWarden> bell = context -> new MiniWardenRenderer(context, ModModelLayers.BELL_WARDEN, "bell_warden");
         EntityRenderers.register(ModEntities.ECHO_WARDEN, echo);
         EntityRenderers.register(ModEntities.BELL_WARDEN, bell);
+        EntityRenderers.register(ModEntities.ECHO_BLAZE, EchoBlazeRenderer::new);
+        EntityRenderers.register(ModEntities.ECHO_GOLEM, EchoGolemRenderer::new);
 
         // the particles behave like end rod sparks, but use our own sprites
         ParticleProviderRegistry.getInstance().register(ModParticles.ECHO_SPARK, EndRodParticle.Provider::new);

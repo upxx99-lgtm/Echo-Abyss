@@ -20,15 +20,12 @@ public final class LootInjection {
 		"minecraft:chests/woodland_mansion",
 		"minecraft:chests/buried_treasure",
 		"minecraft:chests/ancient_city",
-		"minecraft:chests/ruined_portal"
-	);
-
-	// rarer: about 1 chest in 6, but only in the hard structures
-	private static final Set<String> TEMPLATE_CHESTS = Set.of(
-		"minecraft:chests/ancient_city",
-		"minecraft:chests/bastion_treasure",
+		"minecraft:chests/ruined_portal",
 		"minecraft:chests/end_city_treasure"
 	);
+
+	// the template is found only inside the Echo dimension (dungeon chests)
+	private static final Set<String> TEMPLATE_CHESTS = Set.of();
 
 	private LootInjection() {
 	}
