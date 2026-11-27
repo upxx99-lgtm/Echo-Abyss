@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:blasting",
+	"experience": 2.0,
+	"ingredient": "echo_abyss:echo_ore",
+	"result": {
+		"id": "echo_abyss:echo_shard"
+	}
+}

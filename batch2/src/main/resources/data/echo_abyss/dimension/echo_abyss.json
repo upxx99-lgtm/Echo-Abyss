@@ -1,0 +1,11 @@
+{
+	"type": "echo_abyss:echo_abyss",
+	"generator": {
+		"type": "minecraft:noise",
+		"biome_source": {
+			"type": "minecraft:fixed",
+			"biome": "echo_abyss:echo_islands"
+		},
+		"settings": "echo_abyss:echo_abyss"
+	}
+}
