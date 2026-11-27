@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"axis=y": {
+			"model": "echo_abyss:block/echo_pillar"
+		},
+		"axis=z": {
+			"model": "echo_abyss:block/echo_pillar",
+			"x": 90
+		},
+		"axis=x": {
+			"model": "echo_abyss:block/echo_pillar",
+			"x": 90,
+			"y": 90
+		}
+	}
+}
