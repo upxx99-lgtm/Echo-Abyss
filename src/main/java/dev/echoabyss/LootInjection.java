@@ -12,23 +12,11 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 public final class LootInjection {
 	// about 1 chest in 8 has a key
 	private static final Set<String> KEY_CHESTS = Set.of(
-		"minecraft:chests/simple_dungeon",
-		"minecraft:chests/abandoned_mineshaft",
-		"minecraft:chests/desert_pyramid",
-		"minecraft:chests/jungle_temple",
-		"minecraft:chests/stronghold_corridor",
-		"minecraft:chests/woodland_mansion",
-		"minecraft:chests/buried_treasure",
-		"minecraft:chests/ancient_city",
-		"minecraft:chests/ruined_portal",
-		"minecraft:chests/end_city_treasure"
+		"minecraft:chests/abandoned_mineshaft"
 	);
 
 	// the template is found only inside the Echo dimension (dungeon chests)
-	private static final Set<String> TEMPLATE_CHESTS = Set.of(
-        "echo_abyss:chests/echo_ruin",
-        "echo_abyss:chests/echo_vault"
-    );
+	private static final Set<String> TEMPLATE_CHESTS = Set.of();
 
 	private LootInjection() {
 	}

@@ -90,15 +90,12 @@ public final class ModItems {
 		new Item.Properties().spear(ECHO_MATERIAL, 2.8F, 0.3F, 1.4F, 1.1F, 2.0F, 1.1F, 0.15F, 0.25F, 0.45F));
 
 	// ---- spawn eggs for the mini-bosses ----
-	public static final Item ECHO_WARDEN_SPAWN_EGG = register("echo_warden_spawn_egg", SpawnEggItem::new, new Item.Properties().spawnEgg(ModEntities.ECHO_WARDEN));
-	public static final Item BELL_WARDEN_SPAWN_EGG = register("bell_warden_spawn_egg", SpawnEggItem::new, new Item.Properties().spawnEgg(ModEntities.BELL_WARDEN));
 
 	public static final Item ECHO_BLAZE_SPAWN_EGG = register("echo_blaze_spawn_egg", SpawnEggItem::new, new Item.Properties().spawnEgg(ModEntities.ECHO_BLAZE));
 	public static final Item ECHO_GOLEM_SPAWN_EGG = register("echo_golem_spawn_egg", SpawnEggItem::new, new Item.Properties().spawnEgg(ModEntities.ECHO_GOLEM));
 
 	// dropped by the Echo Blaze; used to craft the dungeon compass
 	public static final Item ECHO_FRAGMENT = register("echo_fragment", Item::new, new Item.Properties());
-	public static final Item ECHO_COMPASS = register("echo_compass", DungeonCompassItem::new, new Item.Properties().stacksTo(1));
 
 	// ---- armor ----
 	public static final Item ECHO_HELMET = register("echo_helmet", Item::new,
@@ -146,12 +143,9 @@ public final class ModItems {
 			output.accept(ECHO_CHESTPLATE);
 			output.accept(ECHO_LEGGINGS);
 			output.accept(ECHO_BOOTS);
-			output.accept(ECHO_WARDEN_SPAWN_EGG);
-			output.accept(BELL_WARDEN_SPAWN_EGG);
 			output.accept(ECHO_BLAZE_SPAWN_EGG);
 			output.accept(ECHO_GOLEM_SPAWN_EGG);
 			output.accept(ECHO_FRAGMENT);
-			output.accept(ECHO_COMPASS);
 		})
 		.build();
 
