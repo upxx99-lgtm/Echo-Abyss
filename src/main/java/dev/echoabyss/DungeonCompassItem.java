@@ -8,6 +8,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.protocol.game.ClientboundSetActionBarTextPacket;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -27,7 +29,7 @@ public class DungeonCompassItem extends Item {
 
     @Override
     public InteractionResult use(Level level, Player user, InteractionHand hand) {
-        if (!(level instanceof ServerLevel serverLevel)) {
+        if (!(level instanceof ServerLevel serverLevel) || !(user instanceof ServerPlayer serverPlayer)) {
             return InteractionResult.PASS;
         }
         long now = serverLevel.getGameTime();
@@ -39,13 +41,18 @@ public class DungeonCompassItem extends Item {
 
         BlockPos found = serverLevel.findNearestMapStructure(DUNGEONS, user.blockPosition(), 100, false);
         if (found == null) {
-            user.displayClientMessage(Component.translatable("message.echo_abyss.compass.none"), true);
+            serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
+                Component.translatable("message.echo_abyss.compass.none")
+            ));
         } else {
             double dx = found.getX() - user.getX();
             double dz = found.getZ() - user.getZ();
             int distance = (int) Math.sqrt(dx * dx + dz * dz);
             int sector = Math.floorMod(Math.round((float) (Math.toDegrees(Math.atan2(dz, dx)) / 45.0)), 8);
-            user.displayClientMessage(Component.translatable("message.echo_abyss.compass.found", distance, Component.translatable("compass.echo_abyss.dir." + sector)), true);
+            serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
+                Component.translatable("message.echo_abyss.compass.found", distance,
+                    Component.translatable("compass.echo_abyss.dir." + sector))
+            ));
         }
         return InteractionResult.SUCCESS;
     }

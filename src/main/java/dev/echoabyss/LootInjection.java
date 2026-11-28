@@ -25,7 +25,10 @@ public final class LootInjection {
 	);
 
 	// the template is found only inside the Echo dimension (dungeon chests)
-	private static final Set<String> TEMPLATE_CHESTS = Set.of();
+	private static final Set<String> TEMPLATE_CHESTS = Set.of(
+        "echo_abyss:chests/echo_ruin",
+        "echo_abyss:chests/echo_vault"
+    );
 
 	private LootInjection() {
 	}
