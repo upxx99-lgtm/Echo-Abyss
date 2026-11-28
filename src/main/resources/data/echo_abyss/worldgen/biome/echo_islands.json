@@ -16,87 +16,28 @@
   },
   "features": [
     [],
-    [
-      "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface"
-    ],
-    [
-      "minecraft:amethyst_geode",
-      "minecraft:large_dripstone"
-    ],
-    [
-      "minecraft:monster_room",
-      "minecraft:monster_room_deep"
-    ],
+    [],
+    [],
+    [],
     [],
     [],
     [
       "echo_abyss:echo_ore"
     ],
-    [
-      "minecraft:dripstone_cluster",
-      "minecraft:pointed_dripstone"
-    ],
-    [
-      "minecraft:spring_water",
-      "minecraft:spring_lava"
-    ],
-    [
-      "minecraft:glow_lichen",
-      "minecraft:patch_tall_grass_2",
-      "minecraft:trees_plains",
-      "minecraft:flower_plains",
-      "minecraft:patch_grass_plain",
-      "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
-      "minecraft:patch_pumpkin"
-    ],
-    [
-      "minecraft:freeze_top_layer"
-    ]
+    [],
+    [],
+    [],
+    []
   ],
   "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
-    "ambient": [
-      {
-        "type": "minecraft:bat",
-        "maxCount": 8,
-        "minCount": 8,
-        "weight": 10
-      }
-    ],
+    "ambient": [],
     "axolotls": [],
     "creature": [],
     "misc": [],
-    "monster": [
-      {
-        "type": "minecraft:enderman",
-        "maxCount": 3,
-        "minCount": 1,
-        "weight": 30
-      },
-      {
-        "type": "minecraft:skeleton",
-        "maxCount": 3,
-        "minCount": 2,
-        "weight": 40
-      },
-      {
-        "type": "minecraft:zombie",
-        "maxCount": 3,
-        "minCount": 2,
-        "weight": 40
-      }
-    ],
-    "underground_water_creature": [
-      {
-        "type": "minecraft:glow_squid",
-        "maxCount": 6,
-        "minCount": 4,
-        "weight": 10
-      }
-    ],
+    "monster": [],
+    "underground_water_creature": [],
     "water_ambient": [],
     "water_creature": []
   },
